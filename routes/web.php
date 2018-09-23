@@ -18,3 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/user/{role_id}',function($role_id){
+//     'uses' => 'UserController@index'
+// });
+
+Route::get('user/{role_id}',[
+    "uses" => 'UserController@index',
+    "as"   => 'userID',
+    
+]);
